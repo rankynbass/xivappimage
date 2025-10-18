@@ -1,0 +1,20 @@
+name: Build AppImage for XIVLauncher-RB
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: debian:12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          ./build.sh
+          rm build/appimagetool
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: xivlauncher-rb
+          path: build
