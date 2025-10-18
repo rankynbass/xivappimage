@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=XIVLauncher-RB
+Comment=Custom launcher for Final Fantasy XIV. Custom fork by Rankyn Bass with Proton and DLSS support.
+Exec=xivlauncher-rb
+Icon=xivlauncher-rb
+Terminal=false
+Type=Application
+Categories=Game;
+StartupWMClass=XIVLauncher.Core
