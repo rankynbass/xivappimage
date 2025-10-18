@@ -2,7 +2,21 @@
 
 export APPIMAGE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-export LD_LIBRARY_PATH=$APPIMAGE_ROOT/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/lib64:/usr/lib:$LD_LIBRARY_PATH
+LDCONFIG_PATH=$(which ldconfig)
+if [ -z "$LDCONFIG_PATH" ]; then
+    if [ -f "/sbin/ldconfig" ]; then
+        LDCONFIG_PATH="/sbin/ldconfig"
+    elif [ -f "/usr/sbin/ldconfig" ]; then
+        LDCONFIG_PATH="/usr/sbin/ldconfig"
+    fi
+fi
+
+HOST_LD_SEARCH=$($LDCONFIG_PATH -v 2>/dev/null | grep -E '^/.*:' | cut -d: -f1 | tr '\n' ':' | sed 's/:$//')
+if [ -z "$HOST_LD_SEARCH" ]; then
+    HOST_LD_SEARCH="/lib64:/lib/x86_64-linux-gnu:/lib"
+fi
+
+export LD_LIBRARY_PATH=$APPIMAGE_ROOT/usr/lib:$HOST_LD_SEARCH:$LD_LIBRARY_PATH
 export PATH=$APPIMAGE_ROOT/usr/bin:$APPIMAGE_ROOT/usr/lib:$PATH
 
 $APPIMAGE_ROOT/opt/xivlauncher-rb/XIVLauncher.Core $@
