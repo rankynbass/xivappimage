@@ -10,6 +10,9 @@ else
 fi
 cd xivlauncher-rb/opt/xivlauncher-rb
 
+echo ""
+echo "Copying and extracting XIVLauncher-RB"
+echo "====================================="
 wget "https://github.com/rankynbass/XIVLauncher.Core/releases/${release}/XIVLauncher.Core.tar.gz" -O "XIVLauncher.Core.tar.gz"
 tar -xf XIVLauncher.Core.tar.gz
 rm XIVLauncher.Core.tar.gz

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+echo ""
+echo "Downloading AppImage tool"
+echo "========================="
+
 current=$(pwd)
 mkdir -p build
 cd build
@@ -9,5 +14,9 @@ fi
 update_data="gh-releases-zsync|rankynbass|xivlauncher-appimage|latest|xivlauncher-rb-x86_64.AppImage.zsync"
 appdir="${current}/xivlauncher-rb"
 output_name="xivlauncher-rb-x86_64.AppImage"
+
+echo ""
+echo "Creating AppImage"
+echo "================="
 
 ./appimagetool -u "$update_data" "$appdir" "$output_name"

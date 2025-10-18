@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
+
+echo "Creating base directory structure"
+echo "================================="
 mkdir -p xivlauncher-rb/opt/xivlauncher-rb
 mkdir -p xivlauncher-rb/usr/bin
 mkdir -p xivlauncher-rb/usr/lib
 mkdir -p xivlauncher-rb/usr/share/applications
 mkdir -p xivlauncher-rb/usr/share/icons
 
+echo ""
+echo "Copying resources"
+echo "================="
 cp resources/xivlauncher-rb xivlauncher-rb/usr/bin/xivlauncher-rb
 chmod +x xivlauncher-rb/usr/bin/xivlauncher-rb
 
