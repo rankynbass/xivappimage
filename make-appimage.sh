@@ -12,7 +12,7 @@ if [ ! -f "appimagetool" ]; then
     chmod +x appimagetool
 fi
 ./appimagetool --appimage-extract
-update_data="gh-releases-zsync|rankynbass|xivlauncher-appimage|latest|xivlauncher-rb-x86_64.AppImage.zsync"
+update_data="gh-releases-zsync|rankynbass|XIVLauncher.Core|latest|xivlauncher-rb-x86_64.AppImage.zsync"
 appdir="${current}/xivlauncher-rb"
 output_name="xivlauncher-rb-x86_64.AppImage"
 
