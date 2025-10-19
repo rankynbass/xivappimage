@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
+        env:
+          APP_VERSION=rb-v1.2.1.5
+          APP_RELEASE=1
         run: |
           apt update && apt install -y \
             file \

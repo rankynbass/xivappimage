@@ -3,10 +3,10 @@ if [ -f "xivlauncher-rb/opt/xivlauncher-rb/XIVLauncher.Core" ]; then
     rm -rf "xivlauncher-rb/opt/xivlauncher-rb"
     mkdir -p "xivlauncher-rb/opt/xivlauncher-rb"
 fi
-if [ -z "$1" ]; then
+if [ -z "$APP_VERSION" ]; then
     release="latest/download"
 else
-    release="download/$1"
+    release="download/$APP_VERSION"
 fi
 cd xivlauncher-rb/opt/xivlauncher-rb
 
