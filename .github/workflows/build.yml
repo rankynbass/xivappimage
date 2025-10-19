@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     container: debian:12
     env:
-      APP_VERSION=rb-v1.2.1.5
-      APP_RELEASE=1
+      APP_VERSION: rb-v1.2.1.5
+      APP_RELEASE: 1
     steps:
       - uses: actions/checkout@v4
       - name: Build
