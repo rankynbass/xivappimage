@@ -6,9 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: debian:12
+    container: registry.gitlab.steamos.cloud/proton/sniper/sdk
     env:
-      APP_VERSION: rb-v1.3.1.1-beta1
+      APP_VERSION: rb-v1.3.1.1-beta2
       APP_RELEASE: 1
     steps:
       - uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
             zsync \
             fuse3 \
             libjxr0 \
-            libsdl2-2.0-0 \
+            libsdl3-0 \
             libsecret-1-0 \
             libicu-dev \
             dpkg-dev \
