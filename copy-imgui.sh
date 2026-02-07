@@ -52,10 +52,10 @@
         -o "$out_dir/ImGuiImplSDL3.so" \
         -Iimgui -Iimgui/backends -Iimgui/misc/freetype -Isrc -Iinclude \
         $cimgui_impl_cflags \
-        "src/cimgui_impl_{core,sdl3,sdl3renderer,sdlgpu3}.cpp" \
-        "imgui/backends/imgui_impl_{sdl3,sdlrenderer3,sdlgpu3}.cpp" \
-        "imgui/imgui{,_tables,_widgets,_draw,_demo}.cpp" \
-        "imgui/misc/freetype/imgui_freetype.cpp" \
+        src/cimgui_impl_{core,sdl3,sdl3renderer,sdlgpu3}.cpp \
+        imgui/backends/imgui_impl_{sdl3,sdlrenderer3,sdlgpu3}.cpp \
+        imgui/imgui{,_tables,_widgets,_draw,_demo}.cpp \
+        imgui/misc/freetype/imgui_freetype.cpp \
         $cimgui_impl_ldflags
     fi
 
