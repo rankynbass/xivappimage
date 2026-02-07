@@ -15,6 +15,7 @@ jobs:
       - name: Build
         run: |
           apt update && apt install -y \
+            bash \
             file \
             wget \
             curl \

@@ -1,6 +1,5 @@
-    #!/usr/bin/bash
-    set -uex
-
+    #!/bin/bash
+    bash --version
     echo "Building cimgui and ImGuiImplSDL3"
 
     workingDir=$(pwd)
