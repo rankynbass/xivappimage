@@ -1,5 +1,5 @@
     #!/usr/bin/env bash
-    set -ueox pipefail
+    set -uex
 
     echo "Building cimgui and ImGuiImplSDL3"
 
