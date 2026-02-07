@@ -39,7 +39,7 @@ jobs:
           ./copy-tools.sh
           ./copy-deps.sh
           ./copy-xivlauncher.sh
-          ./copy-imgui.sh
+          bash ./copy-imgui.sh
           ./make-appimage.sh
       - name: Upload AppImage
         uses: actions/upload-artifact@v4
