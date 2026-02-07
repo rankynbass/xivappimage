@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     container: registry.gitlab.steamos.cloud/proton/sniper/sdk
     env:
-      APP_VERSION: rb-v1.3.1.1
+      APP_VERSION: rb-v1.3.1.2
       APP_RELEASE: 1
     steps:
       - uses: actions/checkout@v4
@@ -26,11 +26,19 @@ jobs:
             libsecret-1-0 \
             libicu-dev \
             dpkg-dev \
-            pcregrep
+            pcregrep \
+            git \
+            gcc \
+            g++ \
+            libsdl3-dev \
+            libsdl3-image-dev \
+            libfreetype-dev \
+            luajit
           ./create-basedir.sh
           ./copy-tools.sh
           ./copy-deps.sh
           ./copy-xivlauncher.sh
+          ./copy-imgui.sh
           ./make-appimage.sh
       - name: Upload AppImage
         uses: actions/upload-artifact@v4

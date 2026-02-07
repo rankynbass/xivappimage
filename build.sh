@@ -8,14 +8,22 @@ sudo apt-get install -y \
     zsync \
     fuse3 \
     libjxr0 \
-    libsdl2-2.0-0 \
+    libsdl3-0 \
     libsecret-1-0 \
     libicu-dev \
     dpkg-dev \
-    pcregrep
+    pcregrep \
+    git \
+    gcc \
+    g++ \
+    libsdl3-dev \
+    libsdl3-image-dev \
+    libfreetype-dev \
+    luajit
 
 ./create-basedir.sh
 ./copy-tools.sh
 ./copy-deps.sh
 ./copy-xivlauncher.sh
+./copy-imgui.sh
 ./make-appimage.sh

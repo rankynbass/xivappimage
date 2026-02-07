@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 depArray=("libjxr0:amd64" "libsdl3-0:amd64" "libsecret-1-0:amd64" "libicu-dev:amd64")
-excludeArray=("c" "stdc++" "dl" "rt" "pthread" "m" "wayland-client" "wayland-cursor" "wayland-egl" "wayland-server" "xcb" "xkbcommon" "X11" "X11-xcb" "Xau" "Xcursor" "Xdmcp" "Xext" "Xfixes" "Xi" "Xrandr" "Xrendr" "Xss")
+excludeArray=("c" "stdc++" "dl" "rt" "pthread" "m" "gcc_s" "z" "zstd" "wayland-client" "wayland-cursor" "wayland-egl" "wayland-server" "xcb" "xkbcommon" "X11" "X11-xcb" "Xau" "Xcursor" "Xdmcp" "Xext" "Xfixes" "Xi" "Xrandr" "Xrendr" "Xss")
 fileArray=()
 libArray=()
 rxdpkg='^(.+\.so(\.\d)*)$'
