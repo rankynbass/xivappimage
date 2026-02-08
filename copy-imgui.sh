@@ -1,5 +1,6 @@
     #!/bin/bash
     bash --version
+    echo $SHELLOPTS
     echo "Building cimgui and ImGuiImplSDL3"
 
     workingDir=$(pwd)
@@ -58,15 +59,6 @@
         $cimgui_impl_ldflags
     fi
 
-rm -f "$workingDir"/xivlauncher-rb/opt/xivlauncher-rb/{cimgui,ImGuiImplSDL3,libSDL3,libSDL3_image}.so
+rm -f "$workingDir"/xivlauncher-rb/opt/xivlauncher-rb/{cimgui,ImGuiImplSDL3}.so
 
-CopyLib () {
-    libPath=/usr/lib/x86_64-linux-gnu/$1
-    targetLib=$(realpath libPath)
-    targetName=$1
-    cp "$libPath" "$workingDir"/xivlauncher-rb/opt/xivlauncher-rb/"$1"
-}
-
-CopyLib libSDL3.so
-CopyLib libSDL3_image.so
 cp "$out_dir"/* "$workingDir"/xivlauncher-rb/opt/xivlauncher-rb/
